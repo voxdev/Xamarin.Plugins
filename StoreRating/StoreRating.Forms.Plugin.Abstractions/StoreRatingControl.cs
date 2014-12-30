@@ -435,7 +435,10 @@ namespace StoreRating.Forms.Plugin.Abstractions
         {
             var ratingservice = DependencyService.Get<IRatingService>();
             if (ratingservice == null)
+            {
+                Debug.WriteLine("ShowStore: ratingservice == null");
                 return;
+            }
             if (Device.OS == TargetPlatform.iOS)
                 ratingservice.ShowStore(AppID, false);
             if (Device.OS == TargetPlatform.WinPhone)

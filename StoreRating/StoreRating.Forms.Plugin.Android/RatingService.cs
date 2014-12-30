@@ -30,5 +30,6 @@ namespace StoreRating.Forms.Plugin.Droid
             intent.SetFlags(ActivityFlags.NewTask);
             Xamarin.Forms.Forms.Context.StartActivity(intent);
         }
+        public static void Init() { }
     }
 }

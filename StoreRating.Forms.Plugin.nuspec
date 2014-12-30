@@ -6,8 +6,8 @@
        <title>StoreRating Plugin for Xamarin.Forms</title>
        <authors>Russell Collingham</authors>
        <owners>VoxDev Ltd</owners>
-       <licenseUrl></licenseUrl>
-       <projectUrl></projectUrl>
+       <licenseUrl>https://github.com/voxdev/Xamarin.Plugins/blob/master/LICENSE.md</licenseUrl>
+       <projectUrl>https://github.com/voxdev/Xamarin.Plugins</projectUrl>
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>
          Display a store rating dialog after a certain number of uses, or a certain number of days after installation 
@@ -19,6 +19,7 @@
        <tags>xamarin, pcl, xam.pcl, store rating, rating, review, windows phone, winphone, wp8, android, xamarin.forms, ios</tags>
        <dependencies>
          <dependency id="Xamarin.Forms" version="1.2.3.6257" />
+         <dependency id="Xam.Plugins.Settings" version="1.4.0.1" />
        </dependencies>
    </metadata>
    <files>

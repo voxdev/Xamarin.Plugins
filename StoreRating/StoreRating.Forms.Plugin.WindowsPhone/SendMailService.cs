@@ -61,5 +61,6 @@ namespace StoreRating.Forms.Plugin.WindowsPhone
             task.Show();
 
         }
+        public static void Init() { }
     }
 }

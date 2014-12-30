@@ -34,5 +34,6 @@ namespace StoreRating.Forms.Plugin.Droid
 
             Xamarin.Forms.Forms.Context.StartActivity(intent);
         }
+        public static void Init() { }
     }
 }

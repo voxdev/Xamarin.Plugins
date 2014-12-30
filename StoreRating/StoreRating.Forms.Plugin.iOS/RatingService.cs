@@ -18,5 +18,6 @@ namespace StoreRating.Forms.Plugin.iOS
             if (!string.IsNullOrWhiteSpace(id))
                 UIApplication.SharedApplication.OpenUrl(new NSUrl("itms-apps://itunes.apple.com/app/id" + id));
         }
+        public static void Init() { }
     }
 }

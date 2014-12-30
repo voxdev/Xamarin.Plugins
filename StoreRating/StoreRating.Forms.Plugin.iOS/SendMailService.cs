@@ -27,5 +27,6 @@ namespace StoreRating.Forms.Plugin.iOS
 
             UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(mailer, true, null);
         }
+        public static void Init() { }
     }
 }

@@ -17,5 +17,6 @@ namespace StoreRating.Forms.Plugin.WindowsPhone
         {
             new MarketplaceReviewTask().Show();
         }
+        public static void Init() { }
     }
 }
