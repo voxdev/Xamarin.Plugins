@@ -17,8 +17,14 @@ using StoreRating.Forms.Plugin.Abstractions;
 
 namespace StoreRating.Forms.Plugin.Droid
 {
+    /// <summary>
+    /// Android native email control
+    /// </summary>
     public class SendMailService : ISendMailService
     {
+        /// <summary>
+        /// Android Open the native email control
+        /// </summary>
         public void ShowDraft(string subject, string body, string[] to, string[] cc, string[] bcc)
         {
             var intent = new Intent(Intent.ActionSend);
@@ -34,6 +40,9 @@ namespace StoreRating.Forms.Plugin.Droid
 
             Xamarin.Forms.Forms.Context.StartActivity(intent);
         }
+        /// <summary>
+        /// Android dummy initialisation
+        /// </summary>
         public static void Init() { }
     }
 }

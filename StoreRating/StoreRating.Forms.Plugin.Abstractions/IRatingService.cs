@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace StoreRating.Forms.Plugin.Abstractions
 {
+    /// <summary>
+    /// Interface for leaving a native rating
+    /// </summary>
     public interface IRatingService
     {
-        void ShowStore(string id="", bool IsAmazon = false);
+        /// <summary>
+        /// Open the native store / marketplace
+        /// </summary>
+        void ShowStore(string id = "", bool IsAmazon = false);
     }
 }

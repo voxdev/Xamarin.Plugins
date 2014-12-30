@@ -14,170 +14,170 @@ namespace StoreRating.Forms.Plugin.Abstractions
     /// </summary>
     public class StoreRatingControl : RelativeLayout
     {
+        private static string _AppName = "";
         /// <summary>
         /// Your application name
         /// </summary>
-        private static string _AppName = "";
         public static string AppName
         {
             get { return _AppName; }
             set { _AppName = value; }
         }
 
+        private static string _AppID = "";
         /// <summary>
         /// iOS application ID from iTunes Connect
         /// </summary>
-        private static string _AppID = "";
         public static string AppID
         {
             get { return _AppID; }
             set { _AppID = value; }
         }
         
+        private static bool _IsAmazon = false;
         /// <summary>
         /// Set for Amazon store (Android only)
         /// </summary>
-        private static bool _IsAmazon = false;
         public static bool IsAmazon
         {
             get { return _IsAmazon; }
             set { _IsAmazon = value; }
         }
 
+        private static string _RatingMessageTitle = "Rate #MyApp#";
         /// <summary>
         /// Rating message title text
         /// </summary>
-        private static string _RatingMessageTitle = "Rate #MyApp#";
         public static string RatingMessageTitle
         {
             get { return _RatingMessageTitle; }
             set { _RatingMessageTitle = value; }
         }
 
+        private static string _RatingMessage = "If you enjoy using #MyApp#, would you mind taking a moment to rate it?\n\nIt won't take more than a minute. Thanks for your support!";
         /// <summary>
         /// Rating message text
         /// </summary>
-        private static string _RatingMessage = "If you enjoy using #MyApp#, would you mind taking a moment to rate it?\n\nIt won't take more than a minute. Thanks for your support!";
         public static string RatingMessage
         {
             get { return _RatingMessage; }
             set { _RatingMessage = value; }
         }
 
+        private static string _RatingCancelText = "No, Thanks";
         /// <summary>
         /// Rating message cancel button text
         /// </summary>
-        private static string _RatingCancelText = "No, Thanks";
         public static string RatingCancelText
         {
             get { return _RatingCancelText; }
             set { _RatingCancelText = value; }
         }
 
+        private static string _RatingRemindText = "Remind Me Later";
         /// <summary>
         /// Rating message remind later button text
         /// </summary>
-        private static string _RatingRemindText = "Remind Me Later";
         public static string RatingRemindText
         {
             get { return _RatingRemindText; }
             set { _RatingRemindText = value; }
         }
 
+        private static string _RateText = "Rate It Now";
         /// <summary>
         /// Rating message rate it now button text
         /// </summary>
-        private static string _RateText = "Rate It Now";
         public static string RateText
         {
             get { return _RateText; }
             set { _RateText = value; }
         }
 
+        private static string _FeedbackMessageTitle = "Can we make it better?";
         /// <summary>
         /// Feedback message title text
         /// </summary>
-        private static string _FeedbackMessageTitle = "Can we make it better?";
         public static string FeedbackMessageTitle
         {
             get { return _FeedbackMessageTitle; }
             set { _FeedbackMessageTitle = value; }
         }
 
+        private static string _FeedbackMessage = "Sorry to hear you didn't want to rate #MyApp#.\n\nTell us about your experience or suggest how we can make it better.";
         /// <summary>
         /// Feedback message
         /// </summary>
-        private static string _FeedbackMessage = "Sorry to hear you didn't want to rate #MyApp#.\n\nTell us about your experience or suggest how we can make it better.";
         public static string FeedbackMessage
         {
             get { return _FeedbackMessage; }
             set { _FeedbackMessage = value; }
         }
 
+        private static string _FeedbackCancelText = "No, Thanks";
         /// <summary>
         /// Feedback message cancel button text
         /// </summary>
-        private static string _FeedbackCancelText = "No, Thanks";
         public static string FeedbackCancelText
         {
             get { return _FeedbackCancelText; }
             set { _FeedbackCancelText = value; }
         }
 
+        private static string _FeedbackText = "Give Feedback";
         /// <summary>
         /// Feedback message give feedback button text
         /// </summary>
-        private static string _FeedbackText = "Give Feedback";
         public static string FeedbackText
         {
             get { return _FeedbackText; }
             set { _FeedbackText = value; }
         }
 
+        private static string _FeedbackEmail = "";
         /// <summary>
         /// Feedback email address
         /// </summary>
-        private static string _FeedbackEmail = "";
         public static string FeedbackEmail
         {
             get { return _FeedbackEmail; }
             set { _FeedbackEmail = value; }
         }
 
+        private static int _UsesBeforeRating = 10;
         /// <summary>
         /// Number of application uses before rating message appears
         /// </summary>
-        private static int _UsesBeforeRating = 10;
         public static int UsesBeforeRating
         {
             get { return _UsesBeforeRating; }
             set { _UsesBeforeRating = value; }
         }
 
+        private static int _DaysBeforeRating = 10;
         /// <summary>
         /// Number of days from first use before rating message appears
         /// </summary>
-        private static int _DaysBeforeRating = 10;
         public static int DaysBeforeRating
         {
             get { return _DaysBeforeRating; }
             set { _DaysBeforeRating = value; }
         }
 
+        private static int _DaysBeforeReminder = 5;
         /// <summary>
         /// Number of days after remind later button click before rating message appears
         /// </summary>
-        private static int _DaysBeforeReminder = 5;
         public static int DaysBeforeReminder
         {
             get { return _DaysBeforeReminder; }
             set { _DaysBeforeReminder = value; }
         }
 
+        private static bool _Preview = false;
         /// <summary>
         /// Override condition to show rating message (for testing purposes)
         /// </summary>
-        private static bool _Preview = false;
         public static bool Preview
         {
             get { return _Preview; }
@@ -240,6 +240,9 @@ namespace StoreRating.Forms.Plugin.Abstractions
             }
         }
 
+        /// <summary>
+        /// Constructor for StoreRatingControl
+        /// </summary>
         public StoreRatingControl()
         {
             try
@@ -260,6 +263,9 @@ namespace StoreRating.Forms.Plugin.Abstractions
             }
         }
 
+        /// <summary>
+        /// Open the ShowRatingControl
+        /// </summary>
         public void ShowRating()
         {
             try
@@ -396,6 +402,9 @@ namespace StoreRating.Forms.Plugin.Abstractions
             this.IsVisible = false;
         }
 
+        /// <summary>
+        /// Increment the counter for the number of times the app is used
+        /// </summary>
         public static void IncUsage()
         {
             try

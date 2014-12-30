@@ -9,8 +9,14 @@ using StoreRating.Forms.Plugin.Abstractions;
 
 namespace StoreRating.Forms.Plugin.WindowsPhone
 {
+    /// <summary>
+    /// Windows native email control
+    /// </summary>
     public class SendMailService : ISendMailService
     {
+        /// <summary>
+        /// Windows Open the native email control
+        /// </summary>
         public void ShowDraft(string subject, string body, string[] to, string[] cc, string[] bcc)
         {
             var task = new EmailComposeTask()
@@ -61,6 +67,9 @@ namespace StoreRating.Forms.Plugin.WindowsPhone
             task.Show();
 
         }
+        /// <summary>
+        /// Windows dummy initialisation
+        /// </summary>
         public static void Init() { }
     }
 }

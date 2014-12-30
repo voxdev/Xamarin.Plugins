@@ -11,12 +11,21 @@ using StoreRating.Forms.Plugin.Abstractions;
 
 namespace StoreRating.Forms.Plugin.WindowsPhone
 {
+    /// <summary>
+    /// Windows native store/marketplace control
+    /// </summary>
     public class RatingService : IRatingService
     {
+        /// <summary>
+        /// Windows Open the native store/marketplace control
+        /// </summary>
         public void ShowStore(string id = "", bool IsAmazon = false)
         {
             new MarketplaceReviewTask().Show();
         }
+        /// <summary>
+        /// Windows dummy initialisation
+        /// </summary>
         public static void Init() { }
     }
 }

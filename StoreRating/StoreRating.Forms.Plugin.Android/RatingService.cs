@@ -18,8 +18,14 @@ using StoreRating.Forms.Plugin.Abstractions;
 
 namespace StoreRating.Forms.Plugin.Droid
 {
+    /// <summary>
+    /// Android native store/marketplace control
+    /// </summary>
     public class RatingService : IRatingService
     {
+        /// <summary>
+        /// Android Open the native store/marketplace control
+        /// </summary>
         public void ShowStore(string id = "", bool IsAmazon = false)
         {
             Intent intent = new Intent("android.intent.action.VIEW");
@@ -30,6 +36,9 @@ namespace StoreRating.Forms.Plugin.Droid
             intent.SetFlags(ActivityFlags.NewTask);
             Xamarin.Forms.Forms.Context.StartActivity(intent);
         }
+        /// <summary>
+        /// Android dummy initialisation
+        /// </summary>
         public static void Init() { }
     }
 }

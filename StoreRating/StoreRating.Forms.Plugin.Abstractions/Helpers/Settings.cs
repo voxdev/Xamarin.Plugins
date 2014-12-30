@@ -27,6 +27,9 @@ namespace StoreRating.Forms.Plugin.Abstractions.Helpers
     #endregion
 
 
+    /// <summary>
+    /// General Settings
+    /// </summary>
     public static string GeneralSettings
     {
       get

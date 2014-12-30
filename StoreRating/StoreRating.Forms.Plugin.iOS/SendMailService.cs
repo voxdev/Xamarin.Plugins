@@ -10,8 +10,14 @@ using StoreRating.Forms.Plugin.Abstractions;
 
 namespace StoreRating.Forms.Plugin.iOS
 {
+    /// <summary>
+    /// iOS native email control
+    /// </summary>
     public class SendMailService : ISendMailService
     {
+        /// <summary>
+        /// iOS Open the native email control
+        /// </summary>
         public void ShowDraft(string subject, string body, string[] to, string[] cc, string[] bcc)
         {
             var mailer = new MFMailComposeViewController();
@@ -27,6 +33,9 @@ namespace StoreRating.Forms.Plugin.iOS
 
             UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(mailer, true, null);
         }
+        /// <summary>
+        /// iOS dummy initialisation
+        /// </summary>
         public static void Init() { }
     }
 }
