@@ -72,5 +72,75 @@ StoreRating.Forms.Plugin.WindowsPhone.RatingService.Init();
 StoreRating.Forms.Plugin.WindowsPhone.SendMailService.Init();
 ```
 
+###Usage
+Create a StoreRatingControl object and place in a grid on top of your existing page in position (0,0).
+
+```C#
+	public class App
+	{
+        private static StoreRatingControl _ratingControl;
+
+		public static Page GetMainPage()
+		{
+            StoreRatingControl.AppName = "My App";
+            StoreRatingControl.AppID = "0123456789";
+            StoreRatingControl.FeedbackEmail = "myemail@mycompany.com";
+            StoreRatingControl.IncUsage();
+            //StoreRatingControl.Preview = true;
+
+            Grid grTopLevel = new Grid
+            {
+                Padding = 0,
+                BackgroundColor = Color.Blue,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                RowDefinitions = 
+                    {
+                        new RowDefinition{ Height = new GridLength(1, GridUnitType.Star) },
+                    },
+                ColumnDefinitions = 
+                    {
+                        new ColumnDefinition{ Width = new GridLength(1, GridUnitType.Star) },
+                    },
+            };
+
+            Button btnRate = new Button
+            {
+                Text = "Rate Now!",
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+            };
+            btnRate.Clicked += ((s, e) =>
+            {
+                _ratingControl.ShowRating();
+            });
+
+            StackLayout sl = new StackLayout
+            {
+                Orientation = StackOrientation.Vertical,
+                Children =
+                {
+                    new Label {
+					    Text = "Hello, Forms !",
+					    VerticalOptions = LayoutOptions.CenterAndExpand,
+					    HorizontalOptions = LayoutOptions.CenterAndExpand,
+				    },
+                    btnRate
+                }
+            };
+
+            grTopLevel.Children.Add(sl, 0, 1, 0, 1);
+
+            _ratingControl = new StoreRatingControl();
+            grTopLevel.Children.Add(_ratingControl, 0, 1, 0, 1);
+
+			return new ContentPage
+			{
+                Content = grTopLevel
+			};
+		}
+	}
+```
+
 ###License
 Licensed under MIT see License file
