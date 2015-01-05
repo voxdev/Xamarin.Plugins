@@ -15,7 +15,6 @@ shown which sends an email to the developer.
 
 ![Store Rating Plugin for Xamain.Forms](http://www.voxdev.com/storerating2.png "Store Rating Plugin for Xamain.Forms")
 
-
 ###Settings
 
 The plugin properties can be set once in the shared App.cs file
