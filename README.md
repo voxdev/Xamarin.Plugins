@@ -11,9 +11,9 @@ or on demand (eg on button tap). The user can leave a rating, delay giving a rat
 The rating dialog brings up the relevant store page. If the rating request is declined then a feedback dialog is 
 shown which sends an email to the developer.
 
-![Store Rating Plugin for Xamain.Forms](http://www.voxdev.com/storerating1.png "Store Rating Plugin for Xamain.Forms")
+![Store Rating Plugin for Xamain.Forms](http://www.voxdev.com/storerating3.png "Store Rating Plugin for Xamain.Forms")
 
-![Store Rating Plugin for Xamain.Forms](http://www.voxdev.com/storerating2.png "Store Rating Plugin for Xamain.Forms")
+![Store Rating Plugin for Xamain.Forms](http://www.voxdev.com/storerating4.png "Store Rating Plugin for Xamain.Forms")
 
 ###Settings
 
