@@ -142,7 +142,7 @@ Create a StoreRatingControl object and place in a grid on top of your existing p
 	}
 ```
 
-###Usage
+###Usage Counter
 To use the usage counter, you need to call the increment function each time the app starts (such as in the shared App.cs file)
 
 ```C#
