@@ -22,6 +22,7 @@ The plugin properties can be set once in the shared App.cs file
 ```C#
 StoreRatingControl.AppName = "My App";
 StoreRatingControl.FeedbackEmail = "myemail@mycompany.com";
+StoreRatingControl.IncUsage();
 ```
 
 ####Required Settings
@@ -139,6 +140,15 @@ Create a StoreRatingControl object and place in a grid on top of your existing p
 			};
 		}
 	}
+```
+
+###Usage
+To use the usage counter, you need to call the increment function each time the app starts (such as in the shared App.cs file)
+
+```C#
+StoreRatingControl.AppName = "My App";
+StoreRatingControl.FeedbackEmail = "myemail@mycompany.com";
+StoreRatingControl.IncUsage();
 ```
 
 ###License
