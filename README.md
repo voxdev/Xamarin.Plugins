@@ -3,7 +3,7 @@ Xamarin.Plugins
 
 Xamarin.Plugins by VoxDev
 
-##Store Rating Plugin for Xamain.Forms
+## Store Rating Plugin for Xamain.Forms
 
 Display a store rating dialog after a certain number of uses, or a certain number of days after installation 
 or on demand (eg on button tap). The user can leave a rating, delay giving a rating or decline to give a rating.
@@ -15,7 +15,7 @@ shown which sends an email to the developer.
 
 ![Store Rating Plugin for Xamain.Forms](http://www.voxdev.com/storerating4.png "Store Rating Plugin for Xamain.Forms")
 
-###Settings
+### Settings
 
 The plugin properties can be set once in the shared App.cs file
 
@@ -25,11 +25,11 @@ StoreRatingControl.FeedbackEmail = "myemail@mycompany.com";
 StoreRatingControl.IncUsage();
 ```
 
-####Required Settings
+#### Required Settings
 + AppName - the name of your application
 + FeedbackEmail - your contact email for receiving feedback
 
-####Optional Settings
+#### Optional Settings
 + AppID - the Apple ID of your app
 + IsAmazon - indicates if the Amazon Android store should be shown (instead of the default Google Play store)
 + RatingMessageTitle - the title of the Rating dialog
@@ -46,7 +46,7 @@ StoreRatingControl.IncUsage();
 + DaysBeforeReminder - the number of days after remind later button click before the Rating dialog is shown again (default 5)
 + Preview - force the Rating dialog to show on next use
 
-###Manually Display the Rating Dialog
+### Manually Display the Rating Dialog
 
 The Rating dialog can be shown manually, for example on a button click
 
@@ -63,7 +63,7 @@ btnRate.Clicked += ((s, e) =>
 });
 ```
 
-###Required Initialisation
+### Required Initialisation
 To ensure that the control does not get linked out in the application the Init methods must be called just after the Xamarin.Forms.Init() in **each** of the 3 platform specific projects (MainPage.xaml.cs, AppDelegate.cs and MainActivity.cs).
 
 ```C#
@@ -72,7 +72,7 @@ StoreRating.Forms.Plugin.WindowsPhone.RatingService.Init();
 StoreRating.Forms.Plugin.WindowsPhone.SendMailService.Init();
 ```
 
-###Usage
+### Usage
 Create a StoreRatingControl object and place in a grid on top of your existing page in position (0,0).
 
 ```C#
@@ -142,7 +142,7 @@ Create a StoreRatingControl object and place in a grid on top of your existing p
 	}
 ```
 
-###Usage Counter
+### Usage Counter
 To use the usage counter, you need to call the increment function each time the app starts (such as in the shared App.cs file)
 
 ```C#
@@ -151,5 +151,5 @@ StoreRatingControl.FeedbackEmail = "myemail@mycompany.com";
 StoreRatingControl.IncUsage();
 ```
 
-###License
+### License
 Licensed under MIT see License file
